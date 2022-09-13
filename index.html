@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>360</title>
 	<link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
 	<div id="fullpage">
 		<!-- 第一屏 -->
@@ -65,37 +67,18 @@
 			<div class="info"></div>
 		</div>
 		<!-- 第五屏 -->
-		<div class="section fifth">
-			<!-- 信息 -->
-			<div class="info"></div>
-			<!-- 浏览器 -->
-			<div class="broswer">
-				<!-- 四边框 -->
-				<div class="leftline"></div>
-				<div class="topline"></div>
-				<div class="rightline"></div>
-				<div class="bottomline"></div>
-				<!-- 工具栏 -->
-				<div class="toolbar"></div>
-				<!-- 边框盒子 -->
-				<div class="box">
-					<span></span>
-				</div>
-				<div class="line"></div>
-				<!-- 其它 -->
-				<div class="extra"></div>
-			</div>
-		</div>
+
+
 	</div>
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/jquery.fullPage.min.js"></script>
 	<script>
 		$('#fullpage').fullpage({
 			// 设置背景色
-			sectionsColor : ['#0da5d6', '#2AB561', '#DE8910', '#16BA9D', '#0DA5D6'],
+			sectionsColor: ['#0da5d6', '#2AB561', '#DE8910', '#16BA9D', '#0DA5D6'],
 			afterLoad: function (anchorLink, index) {
 				$('.section').removeClass('current');
-				
+
 				// 延时100毫秒执行
 				setTimeout(function () {
 					$('.section').eq(index - 1).addClass('current');
@@ -104,4 +87,5 @@
 		});
 	</script>
 </body>
+
 </html>
